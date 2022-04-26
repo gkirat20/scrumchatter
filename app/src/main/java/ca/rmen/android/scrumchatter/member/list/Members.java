@@ -63,18 +63,18 @@ public class Members {
      * 
      * @param teamId the id of the team in which the member should be added
      */
-    void promptCreateMember(final int teamId) {
+   /* void promptCreateMember(final int teamId) {
         Log.v(TAG, "createMember, teamId = " + teamId);
         Bundle extras = new Bundle(1);
         extras.putLong(Teams.EXTRA_TEAM_ID, teamId);
         DialogFragmentFactory.showInputDialog(mActivity, mActivity.getString(R.string.action_new_member), mActivity.getString(R.string.hint_new_member), null,
                 MemberNameValidator.class, R.id.fab_new_member, extras);
-    }
+    }*/
 
     /**
      * Adds a member with the given name to the given team, in the DB.
      */
-    public void createMember(final long teamId, final String memberName) {
+   /* public void createMember(final long teamId, final String memberName) {
         Log.v(TAG, "createMember, teamId=" + teamId + ", memberName=" + memberName);
 
         // Ignore an empty name.
@@ -88,7 +88,7 @@ public class Members {
                 mActivity.getContentResolver().insert(MemberColumns.CONTENT_URI, values);
             });
         }
-    }
+    }*/
 
     /**
      * Show a dialog with a text input for the member name. Validate that the member doesn't already exist in the given team. Upon pressing "OK", update the
